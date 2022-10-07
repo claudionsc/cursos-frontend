@@ -1,10 +1,23 @@
+// import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { hideAlunos } from "../../store";
 import Button from "../Button/Button";
+// import axios from 'axios'
 
 function ListAlunos(){
     const alunos = useSelector((state) => state.alunos)
     const dispatch = useDispatch()
+
+    // const [alunos, setAlunos] = useState([])
+
+    // useEffect(() => {
+    //     axios.get('https://crud-alunos-202210.herokuapp.com/alunos')
+
+    //     .then(response => {
+    //         setAlunos(response.data)
+    //         console.log(alunos)
+    //     })
+    // }, [])
 
     return (
         <section>
