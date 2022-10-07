@@ -13,10 +13,10 @@ export const hideAlunos = createAction('alunos/hideAlunos')
 
 const AlunoReducer = createReducer(INITIAL_STATE, {
     [showAlunos]: (state, action) => [
-        // ...state,
+        ...state,
 
-        action.payload
-        // { id: state.length + 1, nome: action.payload },
+        // action.payload
+        { id: state.length + 1, nome: action.payload },
     ],
     [hideAlunos]: (state, action) => 
     state.filter((u) => u.id !== action.payload),
