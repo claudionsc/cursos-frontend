@@ -1,17 +1,25 @@
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { hideAlunos } from "../../store";
 import Button from "../Button/Button";
+import { getApi } from '../../store/fetchActions'
 
 function ListAlunos(){
     const alunos = useSelector((state) => state.alunos)
     const dispatch = useDispatch()
 
+
+    
+    useEffect(() => {
+       dispatch(getApi())
+    }, [dispatch])
+
     return (
         <section>
             <ul className="list-group">
-                {alunos.map((u, index) => (
-                    <li key={index} className="list-group-item">
-                        {u.nome}{" "}
+                {alunos.map((aluno, id) => (
+                    <li key={id} className="list-group-item">
+                        {alunos.length}
                     </li>
                 ))}
             </ul>
@@ -21,6 +29,7 @@ function ListAlunos(){
                         className="item-list"
                         onClick={() => {
                             dispatch(hideAlunos())
+                            console.log(alunos.name)
                         }}
                         >
                             Ocultar  

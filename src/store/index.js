@@ -1,16 +1,9 @@
 import { configureStore, createAction, createReducer } from "@reduxjs/toolkit";
 
+
 // valor inicial
 
-const INITIAL_STATE = [
-    {
-        nome: "teste",
-    },
-    {
-        nome: "teste",
-    }
-]
-
+const INITIAL_STATE = []
 // actions
 
 export const showAlunos = createAction('alunos/showAlunos')
@@ -20,8 +13,10 @@ export const hideAlunos = createAction('alunos/hideAlunos')
 
 const AlunoReducer = createReducer(INITIAL_STATE, {
     [showAlunos]: (state, action) => [
-        ...state,
-        { id: state.length + 1, nome: action.payload },
+        // ...state,
+
+        action.payload
+        // { id: state.length + 1, nome: action.payload },
     ],
     [hideAlunos]: (state, action) => 
     state.filter((u) => u.id !== action.payload),

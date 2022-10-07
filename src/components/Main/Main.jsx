@@ -1,7 +1,8 @@
 import { useState } from "react"
 import Button from "../Button/Button"
-import Form from "../Form/Form"
+// import Form from "../Form/Form"
 import ListAlunos from "../ListAlunos/List"
+// import Api from "../../services/api"
 
 
 
@@ -20,12 +21,12 @@ function Main(){
     <>
     <h1>Main</h1>
     <Button onClick={handleShow} >Button Main</Button>
-    <Form />
-    {show === true && 
+    {/* <Form /> */}
+    
     <article>
         <ListAlunos />
     </article>
-    }
+    
     </>
 
     )
