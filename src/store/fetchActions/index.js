@@ -6,8 +6,8 @@ export const getApi = () => {
         api
             .get('/alunos')
             .then((res, req) => {
-                dispatch(showAlunos(res.data.alunos))
-                console.log(res.data.alunos)
+                dispatch(showAlunos(res.data))
+                // console.log(res.data.alunos)
             })
             .catch(console.log)
     }
