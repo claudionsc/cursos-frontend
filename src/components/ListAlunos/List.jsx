@@ -1,14 +1,13 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { hideAlunos } from "../../store";
+import { hideCursos } from "../../store";
 import Button from "../Button/Button";
 import { getApi } from '../../store/fetchActions'
 
 function ListAlunos(){
-    const showAlunos = useSelector((state) => state.alunos)
     const dispatch = useDispatch()
+    const showCursos = useSelector((state) => state.cursos)
 
-    // const showAluno = [...showAlunos]
 
     
     useEffect(() => {
@@ -17,29 +16,29 @@ function ListAlunos(){
 
     return (
         <section>
-            <ul className="list-group">
-                {showAlunos.map(alunos => {
-                
-                return(
-                    <li key={alunos.id} className="list-group-item">
-                        {/* {alunos[0].nome.id}: ${alunos[0].nome.nome} */}
-                        {/* {showAluno[0].alunos} */}
-                        {showAlunos[0].alunos}
-                    </li>
+            <ul>
+                {showCursos.map(cursos => {
+                    return(
+                        <div className="List-Curso" >
+                            <li style={{padding: '15px'}} key={cursos.id} className="list-group-item">
+                                {cursos.nome}
+                            </li>
+                    </div>
                     )
                 })}
             </ul>
-            {/* {showAluno.length > 0 &&*/
+
+            {showCursos.length > 0 &&
                         <Button
-                        href="nome"
-                        className="item-list"
-                        onClick={() => {
-                            dispatch(hideAlunos())
-                            
-                            console.log(showAlunos)
-                        }}
-                        >
-                            Ocultar  
+                            href="nome"
+                            className="item-list"
+                            onClick={() => {
+                                dispatch(hideCursos())
+                                
+                                console.log(showCursos)
+                            }}
+                            >
+                                Ocultar  
                         </Button>
            /* } */}
         </section>

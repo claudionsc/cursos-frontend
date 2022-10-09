@@ -1,5 +1,4 @@
 import { configureStore, createAction, createReducer } from "@reduxjs/toolkit";
-import { getApi } from "./fetchActions";
 
 
 // valor inicial
@@ -7,15 +6,15 @@ import { getApi } from "./fetchActions";
 const INITIAL_STATE = []
 // actions
 
-export const showAlunos = createAction('alunos/showAlunos')
-export const hideAlunos = createAction('alunos/hideAlunos')
+export const showCursos = createAction('cursos/showCursos')
+export const hideCursos = createAction('cursos/hideCursos')
 
 // reducers
 
 const AlunoReducer = createReducer(INITIAL_STATE, {
-    [showAlunos]: (state, action) => [action.payload],
-    [hideAlunos]: (state, action) => 
-    state.filter((u) => u.id !== action.payload),
+    [showCursos]: (state, action) => action.payload.cursos,
+    [hideCursos]: (state, action) => 
+    state.filter((u) => u.id !== action.payload[0]),
 });
 
 // Middlewares
@@ -27,7 +26,7 @@ const loggerMiddleware = store => next => action => {
 }
 
 const confirmMiddleware = store => next => action => {
-    if(action.type === hideAlunos.type){
+    if(action.type === hideCursos.type){
         next(action)
     }else{
         next(action)
@@ -39,7 +38,7 @@ const confirmMiddleware = store => next => action => {
 
 export default configureStore({
     reducer: {
-        alunos: AlunoReducer,
+        cursos: AlunoReducer,
     },
     middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(loggerMiddleware)

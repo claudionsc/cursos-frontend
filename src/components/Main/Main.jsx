@@ -1,9 +1,8 @@
 import { useState } from "react"
 import Button from "../Button/Button"
-// import Form from "../Form/Form"
+import Header from "../Header/Header"
 import ListAlunos from "../ListAlunos/List"
-// import Api from "../../services/api"
-
+import VideoView from "../VideoView/VideoView"
 
 
 
@@ -19,13 +18,18 @@ function Main(){
 
     return(
     <>
-    <h1>Main</h1>
-    <Button onClick={handleShow} >Button Main</Button>
-    {/* <Form /> */}
-    
-    <article>
-        <ListAlunos />
-    </article>
+    <div id="main-container">
+        <main className="Main">
+            <div className="h-cursos">
+                <Header />
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <VideoView />
+            </div>
+        </main>
+        
+            <ListAlunos />
+    </div>
     
     </>
 

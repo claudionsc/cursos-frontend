@@ -1,12 +1,12 @@
-import { showAlunos } from '..'
+import { showCursos } from '..'
 import api from '../../services/api'
 
 export const getApi = () => {
     return (dispatch) => {
         api
-            .get('/alunos')
+            .get('/cursos')
             .then((res, req) => {
-                dispatch(showAlunos(res.data))
+                dispatch(showCursos(res.data))
                 // console.log(res.data.alunos)
             })
             .catch(console.log)
