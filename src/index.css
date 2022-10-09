@@ -1,27 +1,30 @@
 body {
-  background-color: rgb(255, 0, 0);
+
   display: flex;
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-family: 'Poppins', sans-serif;
 }
 
 *{
   margin: 0;
   padding: 0;
+  color: white
 }
 
 
 .h-cursos {
-  background-color: aqua;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,22,110,1) 100%);
   width: 70vw;
-  height: 100px;
-  /* position: relative;
-  top: -19px */
+  height: 90px;
   
 }
 
 #main-container{
-  background-color: yellow;
+  background-color: rgb(15, 15, 15);
   display: flex;
   flex-direction: row;
   height: 100vh;
@@ -29,10 +32,9 @@ body {
 }
 
 .Main{
-  background-color: violet;
+  background-color: rgb(24, 24, 24);
   width: 70vw;
   height: 100vh;
-  /* padding-top: -50px; */
 }
 
 .List{
@@ -44,8 +46,13 @@ body {
   justify-content: center;
 }
 
+.List-Curso:hover{
+  background-color: black;
+}
+
 .List-Curso{
-  background-color: blue;
+  background-color: rgb(33, 33, 33);
+  
   list-style: none;
   color: white;
   width: 62vh;

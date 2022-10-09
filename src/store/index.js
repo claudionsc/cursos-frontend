@@ -14,7 +14,7 @@ export const hideCursos = createAction('cursos/hideCursos')
 const AlunoReducer = createReducer(INITIAL_STATE, {
     [showCursos]: (state, action) => action.payload.cursos,
     [hideCursos]: (state, action) => 
-    state.filter((u) => u.id !== action.payload[0]),
+    state.filter((u) => u.id !== action.payload),
 });
 
 // Middlewares

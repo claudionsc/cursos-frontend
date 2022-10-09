@@ -19,8 +19,8 @@ function ListAlunos(){
             <ul>
                 {showCursos.map(cursos => {
                     return(
-                        <div className="List-Curso" >
-                            <li style={{padding: '15px'}} key={cursos.id} className="list-group-item">
+                        <div className="List-Curso" key={cursos.id}>
+                            <li style={{padding: '15px'}}  className="list-group-item">
                                 {cursos.nome}
                             </li>
                     </div>
