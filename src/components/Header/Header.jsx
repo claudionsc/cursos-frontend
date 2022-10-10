@@ -18,8 +18,17 @@ export default function Header() {
     
     <header className="header-curso">
         <div style={{paddingLeft: '25px', paddingTop: '15px'}}>
-            <h3>{showTitles.nome}</h3>
-            <h5>{showTitles.linguagem} </h5>
+
+            {showTitles.nome ? 
+            <>
+                <h3>{showTitles.nome}</h3>
+                <h5>{showTitles.linguagem} </h5>
+            </> :
+            <>
+               <h2>Selecione o curso ao lado</h2>
+           </>
+            }
+            
             {console.log(showTitles)}
         </div>
     </header>

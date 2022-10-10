@@ -6,16 +6,12 @@ import { getApi } from '../../store/fetchActions'
 
 
 
-function ListAlunos(props){
+function ListAlunos(){
 
-    
-    
     const dispatch = useDispatch()
     const showCursos = useSelector((state) => state.cursos)
 
     const [title, setTitle] = useState()
-
-    
 
     useEffect(() => {
        dispatch(getApi())
@@ -27,8 +23,7 @@ function ListAlunos(props){
                 <div style={{width: '70vw', height: '90px'}}></div>
                 {showCursos.map(cursos => {
                     return(
-                        <div className="List-Curso" key={cursos.id}  render={title} onClick={() =>dispatch(showTitle(cursos))} >
-                            {console.log(title)}
+                        <div className="List-Curso" key={cursos.id} onClick={() =>dispatch(showTitle(cursos))} >
                             <li style={{padding: '15px'}}  className="list-group-item">
                                 {cursos.nome}
                             </li>

@@ -1,5 +1,3 @@
-import { useState } from "react"
-import Button from "../Button/Button"
 import Header from "../Header/Header"
 import ListAlunos from "../ListAlunos/List"
 import VideoView from "../VideoView/VideoView"
@@ -7,17 +5,7 @@ import VideoView from "../VideoView/VideoView"
 
 
 function Main(){
-
-    const [show, setShow] = useState(false)
-
-    const handleShow = () => {
-        setShow(true)
-        console.log(show)
-    }
-
-
-    return(
-    <>
+return(
     <div id="main-container">
         <main className="Main">
             <div className="h-cursos">
@@ -27,13 +15,13 @@ function Main(){
                 <VideoView />
             </div>
         </main>
-        
-            <ListAlunos/>
-    </div>
-    
-    </>
 
-    )
+    <ListAlunos/>
+    </div>
+
+
+
+)
 }
 
 export default Main

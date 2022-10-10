@@ -4,10 +4,7 @@ import { configureStore, createAction, createReducer } from "@reduxjs/toolkit";
 // valor inicial
 
 const INITIAL_STATE = []
-const CURSO_STATE = [{
-    nome: 'Selecione o curso ao lado',
-    linguagem: ''
-}]
+const CURSO_STATE = []
 // actions
 
 export const showCursos = createAction('cursos/showCursos')

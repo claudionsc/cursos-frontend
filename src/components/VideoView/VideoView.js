@@ -14,9 +14,18 @@ export default function VideoView(){
     
     return (
         <div style={{backgroundColor: '#102632', width: '90%', height: '80vh' }}>
+            {console.log(showTitles.length)}
             <div style={{paddingTop: '200px', textAlign: 'center'}}>
-                <strong><h1>{showTitles.nome}</h1></strong>
-                <h2>{showTitles.linguagem}</h2>
+            {showTitles.nome ? 
+            <>
+                <h2>{showTitles.nome}</h2>
+                <h3>{showTitles.linguagem} </h3>
+            </> :
+            <>
+               <h2>Feito por <a href="https://www.linkedin.com/in/claudionsc/" rel="noopener" target="_blank">Claudio Nascimento</a></h2>
+               <h2>Visite o meu <a href="https://github.com/claudionsc" rel="noopener" target="_blank">Github</a></h2>
+           </>
+            }
             </div>
         </div>
     )
