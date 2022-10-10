@@ -1,15 +1,22 @@
+import { useState } from "react";
 import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { hideCursos } from "../../store";
-import Button from "../Button/Button";
+import { useSelector, useDispatch, connect } from "react-redux";
+import {  showTitle } from "../../store";
 import { getApi } from '../../store/fetchActions'
 
-function ListAlunos(){
+
+
+function ListAlunos(props){
+
+    
+    
     const dispatch = useDispatch()
     const showCursos = useSelector((state) => state.cursos)
 
+    const [title, setTitle] = useState()
 
     
+
     useEffect(() => {
        dispatch(getApi())
     }, [dispatch])
@@ -17,30 +24,18 @@ function ListAlunos(){
     return (
         <section>
             <ul>
+                <div style={{width: '70vw', height: '90px'}}></div>
                 {showCursos.map(cursos => {
                     return(
-                        <div className="List-Curso" key={cursos.id}>
+                        <div className="List-Curso" key={cursos.id}  render={title} onClick={() =>dispatch(showTitle(cursos))} >
+                            {console.log(title)}
                             <li style={{padding: '15px'}}  className="list-group-item">
                                 {cursos.nome}
                             </li>
-                    </div>
+                        </div>
                     )
                 })}
             </ul>
-
-            {showCursos.length > 0 &&
-                        <Button
-                            href="nome"
-                            className="item-list"
-                            onClick={() => {
-                                dispatch(hideCursos())
-                                
-                                console.log(showCursos)
-                            }}
-                            >
-                                Ocultar  
-                        </Button>
-           /* } */}
         </section>
     )
 }

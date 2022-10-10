@@ -28,7 +28,7 @@ function Main(){
             </div>
         </main>
         
-            <ListAlunos />
+            <ListAlunos/>
     </div>
     
     </>
