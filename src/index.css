@@ -16,8 +16,8 @@ body {
 
 
 .h-cursos {
-  background: rgb(2,0,36);
-  background: linear-gradient(-180deg, rgb(3, 1, 23) 0%, rgb(8, 12, 30) 100%);
+  background: rgb(24, 0, 36);
+  background: linear-gradient(-180deg, rgb(12, 1, 23) 0%, rgb(22, 8, 30) 100%);
   width: 70vw;
   height: 90px;
   
@@ -37,17 +37,9 @@ body {
   height: 100vh;
 }
 
-.List{
-  background-color: tomato;
-  width: 30vw;
-  height: 100%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
 
 .List-Curso:hover{
-  background-color: black;
+  background-color: rgb(37, 2, 70);
   cursor: pointer;
 }
 
