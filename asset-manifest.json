@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/crud-alunos/static/css/main.15f76c40.css",
+    "main.js": "/crud-alunos/static/js/main.cce72f65.js",
+    "index.html": "/crud-alunos/index.html",
+    "main.15f76c40.css.map": "/crud-alunos/static/css/main.15f76c40.css.map",
+    "main.cce72f65.js.map": "/crud-alunos/static/js/main.cce72f65.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.15f76c40.css",
+    "static/js/main.cce72f65.js"
+  ]
+}
