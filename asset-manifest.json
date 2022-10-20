@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/crud-alunos-frontend/static/css/main.15f76c40.css",
-    "main.js": "/crud-alunos-frontend/static/js/main.cce72f65.js",
-    "index.html": "/crud-alunos-frontend/index.html",
-    "main.15f76c40.css.map": "/crud-alunos-frontend/static/css/main.15f76c40.css.map",
-    "main.cce72f65.js.map": "/crud-alunos-frontend/static/js/main.cce72f65.js.map"
+    "main.css": "/cursos-frontend/static/css/main.4aa061bf.css",
+    "main.js": "/cursos-frontend/static/js/main.32af908e.js",
+    "index.html": "/cursos-frontend/index.html",
+    "main.4aa061bf.css.map": "/cursos-frontend/static/css/main.4aa061bf.css.map",
+    "main.32af908e.js.map": "/cursos-frontend/static/js/main.32af908e.js.map"
   },
   "entrypoints": [
-    "static/css/main.15f76c40.css",
-    "static/js/main.cce72f65.js"
+    "static/css/main.4aa061bf.css",
+    "static/js/main.32af908e.js"
   ]
 }
