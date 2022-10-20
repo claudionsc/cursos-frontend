@@ -11,7 +11,6 @@ function ListAlunos(){
     const dispatch = useDispatch()
     const showCursos = useSelector((state) => state.cursos)
 
-    const [title, setTitle] = useState()
 
     useEffect(() => {
        dispatch(getApi())
