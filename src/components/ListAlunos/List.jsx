@@ -1,6 +1,5 @@
-import { useState } from "react";
 import { useEffect } from "react";
-import { useSelector, useDispatch, connect } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import {  showTitle } from "../../store";
 import { getApi } from '../../store/fetchActions'
 
