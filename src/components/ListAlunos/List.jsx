@@ -20,7 +20,7 @@ function ListAlunos(){
     return (
         <section>
             <ul>
-                <div style={{width: '70vw', height: '90px'}}></div>
+                <div className="uldiv" style={{width: '30vw', height: '70px'}}></div>
                 {showCursos.map(cursos => {
                     return(
                         <div className="List-Curso" key={cursos.id} onClick={() =>dispatch(showTitle(cursos))} >

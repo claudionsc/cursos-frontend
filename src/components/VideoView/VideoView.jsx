@@ -1,7 +1,31 @@
 import React from "react";
+import styled from 'styled-components'
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react";
 import { showTitle } from "../../store";
+
+const Vview = styled.div`
+    background-color: #102632;
+    width: 90%;
+    height: 80vh;
+
+    @media (max-width: 500px) {
+        height: 50vh;
+        width: 100vw;
+    }
+`
+
+const ViewF = styled.div`
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+`
+
+
 
 export default function VideoView(){
 
@@ -13,9 +37,9 @@ export default function VideoView(){
      }, [dispatch])
     
     return (
-        <div style={{backgroundColor: '#102632', width: '90%', height: '80vh' }}>
+        <Vview>
             {console.log(showTitles.length)}
-            <div style={{paddingTop: '200px', textAlign: 'center'}}>
+            <ViewF>
             {showTitles.nome ? 
             <>
                 <h2>{showTitles.nome}</h2>
@@ -26,7 +50,7 @@ export default function VideoView(){
                <h2>Visite o meu <a href="https://github.com/claudionsc" rel="noopener" target="_blank">Github</a></h2>
            </>
             }
-            </div>
-        </div>
+            </ViewF>
+        </Vview>
     )
 }

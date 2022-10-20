@@ -11,27 +11,25 @@ export default function Header() {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(showTitle())
-     }, [dispatch])
-    
+    dispatch(showTitle())
+    }, [dispatch])
+
     return (
-    
-    <header className="header-curso">
-        <div style={{paddingLeft: '25px', paddingTop: '15px'}}>
+
+        <header className="header-curso">
+            <div style={{paddingLeft: '25px', paddingTop: '15px'}}>
 
             {showTitles.nome ? 
-            <>
-                <h3>{showTitles.nome}</h3>
-                <h5>{showTitles.linguagem} </h5>
-            </> :
-            <>
-               <h2>Selecione o curso ao lado</h2>
-           </>
+                <>
+                    <h3>{showTitles.nome}</h3>
+                    <h5>{showTitles.linguagem} </h5>
+                </> :
+                <>
+                    <h2>Selecione o curso ao lado</h2>
+                </>
             }
-            
-            {console.log(showTitles)}
-        </div>
-    </header>
+            </div>
+        </header>
 
     )
 }

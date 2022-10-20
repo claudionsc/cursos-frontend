@@ -9,14 +9,12 @@ const CURSO_STATE = []
 
 export const showCursos = createAction('cursos/showCursos')
 export const showTitle = createAction('cursos/showTitle')
-export const hideCursos = createAction('cursos/hideCursos')
 
 // reducers
 
 const CursosReducers = createReducer(INITIAL_STATE, {
     [showCursos]: (state, action) => action.payload.cursos,
-    // [hideCursos]: (state, action) => 
-    // state.filter((u) => u.id !== action.payload),
+
 });
 
 const ShowCursosReducers = createReducer(CURSO_STATE, {
@@ -26,7 +24,6 @@ const ShowCursosReducers = createReducer(CURSO_STATE, {
 // Middlewares
 
 const loggerMiddleware = store => next => action => {
-    console.log(action)
 
     next(action)
 }
