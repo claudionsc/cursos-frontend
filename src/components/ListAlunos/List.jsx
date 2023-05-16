@@ -1,11 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {  showTitle } from "../../store";
 import { getApi } from '../../store/fetchActions'
 
 
 
-function ListAlunos(){
+function ListCursos(){
 
     const dispatch = useDispatch()
     const showCursos = useSelector((state) => state.cursos)
@@ -34,4 +34,4 @@ function ListAlunos(){
     )
 }
 
-export default ListAlunos
+export default ListCursos

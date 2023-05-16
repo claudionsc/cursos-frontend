@@ -6,15 +6,25 @@ import { showTitle } from "../../store";
 
 const Vview = styled.div`
     background-color: #102632;
-    width: 90%;
     height: 80vh;
+    aspect-ratio: 16/9;
+
 
     @media (max-width: 500px) {
         height: 50vh;
         width: 100vw;
     }
 `
+const ImgView = styled.img`
+    height: 80vh;
+    aspect-ratio: 16/9;
+    object-fit: contain;
 
+    @media (max-width: 500px) {
+        height: 50vh;
+        width: 100vw;
+    }
+`
 const ViewF = styled.div`
 
     display: flex;
@@ -39,11 +49,13 @@ export default function VideoView(){
     return (
         <Vview>
             {console.log(showTitles.length)}
+            {console.log(showTitles.img)}
             <ViewF>
             {showTitles.nome ? 
             <>
-                <h2>{showTitles.nome}</h2>
-                <h3>{showTitles.linguagem} </h3>
+                {/* <h2>{showTitles.nome}</h2>
+                <h3>{showTitles.linguagem} </h3> */}
+                <ImgView className="img-view" src={showTitles.img} alt={showTitles.nome} />
             </> :
             <>
                <h2>Feito por <a href="https://www.linkedin.com/in/claudionsc/" rel="noopener" target="_blank">Claudio Nascimento</a></h2>
