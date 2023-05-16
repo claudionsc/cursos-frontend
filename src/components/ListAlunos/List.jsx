@@ -1,6 +1,5 @@
-import { useState } from "react";
 import { useEffect } from "react";
-import { useSelector, useDispatch, connect } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import {  showTitle } from "../../store";
 import { getApi } from '../../store/fetchActions'
 
@@ -20,7 +19,7 @@ function ListAlunos(){
     return (
         <section>
             <ul>
-                <div style={{width: '70vw', height: '90px'}}></div>
+                <div className="uldiv" style={{width: '30vw', height: '70px'}}></div>
                 {showCursos.map(cursos => {
                     return(
                         <div className="List-Curso" key={cursos.id} onClick={() =>dispatch(showTitle(cursos))} >

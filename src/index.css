@@ -1,10 +1,8 @@
 body {
-
   display: flex;
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
-  overflow-y: hidden;
   font-family: 'PT Sans', sans-serif;
 }
 
@@ -14,12 +12,11 @@ body {
   color: white
 }
 
-
 .h-cursos {
   background: rgb(24, 0, 36);
   background: linear-gradient(-180deg, rgb(12, 1, 23) 0%, rgb(22, 8, 30) 100%);
   width: 70vw;
-  height: 90px;
+  height: 70px;
   
 }
 
@@ -27,7 +24,7 @@ body {
   background-color: rgb(15, 15, 15);
   display: flex;
   flex-direction: row;
-  height: 100vh;
+  height: auto;
 
 }
 
@@ -37,6 +34,13 @@ body {
   height: 100vh;
 }
 
+.List{
+  width: 30vw;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
 
 .List-Curso:hover{
   background-color: rgb(37, 2, 70);
@@ -45,11 +49,61 @@ body {
 
 .List-Curso{
   background-color: rgb(33, 33, 33);
-  
   list-style: none;
   color: white;
-  width: 62vh;
-  height: 7vh;
+  width: 30vw;
+  height: 6.5vh;
   margin-bottom: 2px;
+  
+}
+
+@media (max-width: 600px) {
+  body{
+    font-size: 12px;
+  }
+  
+}
+
+@media(max-width: 500px) {
+
+  body {
+    overflow-y: scroll;
+  }
+
+  .h-cursos {
+    width: 100vw;
+    height: 10vh;
+    font-size: 14px;
+    
+  }
+
+  .uldiv{
+    display: none;
+  }
+
+  #main-container{
+    flex-direction: column;
+    height: 100%;
+    width: 100vw;
+    justify-content: center;
+    align-items: flex-start;
+  
+  }
+
+  .Main{
+    background-color: rgb(24, 24, 24);
+    width: 100vw;
+    height: 70vh;
+  }
+
+  .m-video{
+    background-color: red;
+    height: 50vh;
+  }
+
+  .List-Curso{
+    width: 100vw;
+  }
+
   
 }

@@ -11,7 +11,7 @@ return(
             <div className="h-cursos">
                 <Header />
             </div>
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <div className="m-video" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <VideoView />
             </div>
         </main>
