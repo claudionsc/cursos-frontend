@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react";
 import { showTitle } from "../../store";
-import { CiPlay1 } from 'react-icons/ci'
+import { AiFillPlayCircle } from 'react-icons/ai'
 
 const Vview = styled.div`
     background-color: #102632;
@@ -40,7 +40,6 @@ const Icon = styled.div`
         background-color: #56566e5c;
         border-radius: 50%;
         padding: 5px;
-        text-align: center;
         width: 100px;
         position: absolute;
        
@@ -72,7 +71,7 @@ export default function VideoView() {
                 {showTitles.nome ?
                     <>
                         <Icon>
-                            <CiPlay1 />
+                            <AiFillPlayCircle />
                         </Icon>
                         <ImgView className="img-view" src={showTitles.img} alt={showTitles.nome} />
                     </> :
