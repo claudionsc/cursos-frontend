@@ -11,6 +11,7 @@ function ListAlunos(){
     const dispatch = useDispatch()
     const showCursos = useSelector((state) => state.cursos)
 
+    const [title, setTitle] = useState()
 
     useEffect(() => {
        dispatch(getApi())
@@ -19,7 +20,7 @@ function ListAlunos(){
     return (
         <section>
             <ul>
-                <div style={{width: '70vw', height: '90px', backgroundColor:' rgb(17, 1, 32)'}}></div>
+                <div style={{width: '70vw', height: '90px'}}></div>
                 {showCursos.map(cursos => {
                     return(
                         <div className="List-Curso" key={cursos.id} onClick={() =>dispatch(showTitle(cursos))} >
