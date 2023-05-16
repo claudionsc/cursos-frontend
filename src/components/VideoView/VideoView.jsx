@@ -37,17 +37,14 @@ const ViewF = styled.div`
 `
 
 const Icon = styled.div`
-        background-color: #56566e5c;
-        border-radius: 50%;
-        padding: 5px;
-        width: 100px;
+        
         position: absolute;
        
 
     svg{
-        fill: #cdc1c1;
+        fill: #6969696e;
         height: 100px;
-        font-size: 4rem;
+        font-size: 7rem;
         font-weight: bold;
     }
 `
