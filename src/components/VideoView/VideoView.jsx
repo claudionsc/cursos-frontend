@@ -8,7 +8,8 @@ import { AiFillPlayCircle } from 'react-icons/ai'
 const Vview = styled.div`
     background-color: #102632;
     height: 80vh;
-    aspect-ratio: 16/9;
+    /* aspect-ratio: 16/9; */
+    width: 70vw;
     position: relative;
 
     @media (max-width: 500px) {
@@ -18,6 +19,7 @@ const Vview = styled.div`
 `
 const ImgView = styled.img`
     height: 80vh;
+    max-width: 70vw;
     aspect-ratio: 16/9;
     object-fit: contain;
 
@@ -62,8 +64,6 @@ export default function VideoView() {
 
     return (
         <Vview>
-            {console.log(showTitles.length)}
-            {console.log(showTitles.img)}
             <ViewF>
                 {showTitles.nome ?
                     <>

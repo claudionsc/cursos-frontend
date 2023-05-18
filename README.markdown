@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# Lista de cursos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto em ReactJs, é uma aplicação que simula tela de vídeo de uma plataforma de cursos online.
 
-## Available Scripts
+<p align="center">
+<img width="870" src="src\assets\to_readme\202305181706.gif">
+</p>
 
-In the project directory, you can run:
+# Neste projeto
 
-### `npm start`
+* ReactJs
+* Axios
+* Api Restful
+* Redux
+* Styled-Components
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### `npm i`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Instala todas as dependências necessárias para o a aplicação funcionar
 
-### `npm test`
+Esta aplicação tem conexão com uma api criada por mim, hospedada num web service do [Render](https://render.com/).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Caso tenha interesse, veja o [repositório do banco de dados](https://github.com/claudionsc/cursos-backend) e siga a documentação para criar o banco de dados e testar as requisições localmente. Para a conexão do frontend local com o banco de dados local, basta seguir o caminho `src\services\api.js` e na função presente, mudar o trecho `baseURL: "https://bd-alunos.onrender.com` para `baseURL: "http://localhost:5000/"` ou a porta de sua preferência. 

@@ -1,5 +1,5 @@
 import Header from "../Header/Header"
-import ListAlunos from "../ListAlunos/List"
+import ListAlunos from "../ListCursos/List"
 import VideoView from "../VideoView/VideoView"
 
 
