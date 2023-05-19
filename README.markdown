@@ -1,6 +1,7 @@
 # Lista de cursos
 
 Este projeto em ReactJs, é uma aplicação que simula tela de vídeo de uma plataforma de cursos online.
+[Ver em funcionamento]( https://claudionsc.github.io/cursos-frontend/)
 
 <p align="center">
 <img width="870" src="src\assets\to_readme\202305181706.gif">
